@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ImgProc - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/ImgProc.res" /d "NDEBUG" /d "_AFXDLL" "C:\DIP\ImgProc\ImgProc.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP9.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ImgProc.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\DIP\ImgProc\ImgProc.cpp"
+"C:\DIP\ImgProc\ImgProcDoc.cpp"
+"C:\DIP\ImgProc\ImgProcView.cpp"
+"C:\DIP\ImgProc\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP9.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ImgProc.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\DIP\ImgProc\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ImgProc.pdb" /machine:I386 /out:"Release/ImgProc.exe" 
+.\Release\ImgProc.obj
+.\Release\ImgProcDoc.obj
+.\Release\ImgProcView.obj
+.\Release\MainFrm.obj
+.\Release\StdAfx.obj
+.\Release\ImgProc.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ImgProc.cpp
+ImgProcDoc.cpp
+ImgProcView.cpp
+C:\DIP\ImgProc\ImgProcView.cpp(414) : warning C4018: '<' : signed/unsigned mismatch
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ImgProc.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
