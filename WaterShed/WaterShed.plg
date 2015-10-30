@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WaterShed - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/WaterShed.res" /d "NDEBUG" /d "_AFXDLL" "C:\DIP\WaterShed\WaterShed.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP95.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Release/WaterShed.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\DIP\WaterShed\ImageObject.cpp"
+"C:\DIP\WaterShed\MainFrm.cpp"
+"C:\DIP\WaterShed\MyMath.cpp"
+"C:\DIP\WaterShed\WaterShed.cpp"
+"C:\DIP\WaterShed\WaterShedDoc.cpp"
+"C:\DIP\WaterShed\WaterShedView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP95.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP96.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Release/WaterShed.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\DIP\WaterShed\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP96.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP97.tmp" with contents
+[
+ImageLoad.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/WaterShed.pdb" /machine:I386 /out:"Release/WaterShed.exe" 
+.\Release\ImageObject.obj
+.\Release\MainFrm.obj
+.\Release\MyMath.obj
+.\Release\StdAfx.obj
+.\Release\WaterShed.obj
+.\Release\WaterShedDoc.obj
+.\Release\WaterShedView.obj
+.\Release\WaterShed.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP97.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ImageObject.cpp
+MainFrm.cpp
+MyMath.cpp
+WaterShed.cpp
+WaterShedDoc.cpp
+WaterShedView.cpp
+C:\DIP\WaterShed\WaterShedView.cpp(427) : warning C4018: '<' : signed/unsigned mismatch
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+WaterShed.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
