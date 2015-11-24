@@ -7,11 +7,15 @@
 #include "ImgProcDoc.h"
 #include "ImgProcView.h"
 
+#include <iostream>
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
+
+ 
 
 /////////////////////////////////////////////////////////////////////////////
 // CImgProcView
@@ -28,6 +32,7 @@ BEGIN_MESSAGE_MAP(CImgProcView, CView)
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, CView::OnFilePrintPreview)
+	ON_COMMAND(ID_SHOW_DBD, &CImgProcView::OnShowDbd)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -431,4 +436,133 @@ void CImgProcView::OnShowHd()
 	numPicture = 2;
 	level=1;
 	Invalidate();
+}
+
+
+unsigned char CImgProcView::mysaturate(int iNum)
+{
+	unsigned char ucTmpNum = 0;
+	if (iNum >= 255)
+	{
+		ucTmpNum = 255;
+	}
+	else if (iNum < 0)
+	{
+		ucTmpNum = 0;
+	}
+	else
+	{
+		ucTmpNum = (unsigned char)iNum;
+	}
+
+	return ucTmpNum;
+}
+
+// 对比度alpha的最佳取值范围在[0 ~ 4]
+// 亮度beta的最佳取值范围在[0~3]之间
+/*
+算法原理：g(x) = f(x)*alpha + 亮度均值*(beta-alpha)
+  对比度算法过程：
+  1.计算图像的RGB像素均值；
+  2.对图像的每个像素点与均值求差值；
+  3.对去掉平均值以后的像素点的RGB值，乘以对比度系数
+  4.对上一步像素RGB值，加上均值乘以亮度系数的积
+  5.从而得到像素点新的RGB值
+*/
+double alpha; /**< Simple contrast control */
+int beta;  /**< Simple brightness control */
+void CImgProcView::OnShowDbd()
+{
+	// TODO: 在此添加命令处理程序代码
+
+	int sum_r = 0,sum_g = 0,sum_b = 0;
+	double averg_r = 0,averg_g = 0,averg_b = 0;
+
+	if(numPicture==0)
+	{
+		AfxMessageBox("载入图片后才能灰度图片!",MB_OK,0);
+		return;
+	}
+	AfxMessageBox("对比度图像!",MB_OK,0);
+
+    // 对比度alpha的最佳取值范围在[0 ~ 4]
+    // 亮度beta的最佳取值范围在[0~3]之间
+	alpha = 2.7;
+	beta = 2;
+
+
+	//打开临时的图片
+	FILE *fpo = fopen(BmpName,"rb");
+	FILE *fpw = fopen(BmpNameLin,"wb+");
+	
+	//读取文件
+	fread(&bfh,sizeof(BITMAPFILEHEADER),1,fpo);
+	fread(&bih,sizeof(BITMAPINFOHEADER),1,fpo);
+	fwrite(&bfh,sizeof(BITMAPFILEHEADER),1,fpw);
+	fwrite(&bih,sizeof(BITMAPINFOHEADER),1,fpw);
+	//灰度图像
+	int color;
+	unsigned char red,green,blue;
+	int int_red,int_green,int_blue;
+	double new_light;
+
+	//
+	/* 注意：原来下面所有操作都是for( i=0; i<m_nWidth*m_nHeight; i++ )  
+	   后发现如果图片最后一行没有完整的一行数据，会出现图像变多或变少   
+	   但图像的总像素为m_nImage，如果是m_nImage/3就可以保证所有像素都有 
+	*/
+	// 先要算出所有像素点的平均值
+	for(int i=0; i < m_nImage/3; i++ )
+	{
+		fread(&red,sizeof(char),1,fpo);
+		fread(&green,sizeof(char),1,fpo);
+		fread(&blue,sizeof(char),1,fpo);
+		
+			
+		sum_r += red;
+		sum_g += green;
+		sum_b += blue;
+	}
+	averg_r = sum_r/(m_nImage/3);
+	averg_g = sum_g/(m_nImage/3);
+	averg_b = sum_b/(m_nImage/3);
+
+	// 回到图像文件的RGB值的起点
+	fseek(fpo,sizeof(BITMAPFILEHEADER)+sizeof(BITMAPINFOHEADER),0);
+
+	for(int i=0; i < m_nImage/3; i++ )
+	{
+		fread(&red,sizeof(char),1,fpo);
+		fread(&green,sizeof(char),1,fpo);
+		fread(&blue,sizeof(char),1,fpo);
+		
+		int_red = (int)(red - averg_r);
+		int_green = (int)(green - averg_g);
+		int_blue = (int)(blue - averg_b);
+
+		// 乘以对比度系数
+		int_red = (int)int_red * alpha;
+		int_green =(int)int_green * alpha;
+		int_blue = (int)int_blue * alpha;
+
+		// 调整亮度
+		int_red += (int)averg_r * beta;
+		int_green += (int)averg_g * beta;
+		int_blue += (int)averg_b * beta;
+
+		// 饱和处理
+		red = mysaturate(int_red);
+		green = mysaturate(int_green);
+		blue = mysaturate(int_blue);		
+
+		fwrite(&red,sizeof(char),1,fpw);
+		fwrite(&green,sizeof(char),1,fpw);
+		fwrite(&blue,sizeof(char),1,fpw);
+	}
+	fclose(fpo);
+	fclose(fpw);
+	numPicture = 2;
+	level=1;
+	Invalidate();
+
 }

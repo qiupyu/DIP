@@ -61,9 +61,10 @@ public:
 	RGBQUAD m_pPal;        //颜色表指针
 
 	//添加成员函数
-	void ShowBitmap(CDC* pDC,CString BmpName); //显示位图函数
-	bool ReadBmp();                            //用来读取bmp个手机图片
-	bool SaveBmp(LPCSTR lpFileName);           //用来保存bmp格式图片
+	void ShowBitmap(CDC* pDC,CString BmpName);       //显示位图函数
+	bool ReadBmp();                                  //用来读取bmp个手机图片
+	bool SaveBmp(LPCSTR lpFileName);                 //用来保存bmp格式图片
+	unsigned char mysaturate(int iNum);              //饱和处理函数
 
 	virtual ~CImgProcView();
 #ifdef _DEBUG
@@ -81,6 +82,8 @@ protected:
 	afx_msg void OnShowHd();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnShowDbd();
 };
 
 #ifndef _DEBUG  // debug version in ImgProcView.cpp
