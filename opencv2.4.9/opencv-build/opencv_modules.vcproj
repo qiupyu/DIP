@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="opencv_modules"
+	ProjectGUID="{49BBD738-7BDA-4076-9C77-EDE1983E3058}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			IntermediateDirectory="opencv_modules.dir\Debug"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories=".;"
+				AssemblerListingLocation="Debug/"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="_VARIADIC_MAX=10;CMAKE_INTDIR=\&quot;Debug\&quot;"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories=".;"
+				PreprocessorDefinitions="_VARIADIC_MAX=10;CMAKE_INTDIR=\&quot;Debug\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories=".;"
+				MkTypLibCompatible="false"
+				TargetEnvironment="1"
+				GenerateStublessProxies="true"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			IntermediateDirectory="opencv_modules.dir\Release"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories=".;"
+				AssemblerListingLocation="Release/"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="_VARIADIC_MAX=10;CMAKE_INTDIR=\&quot;Release\&quot;"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories=".;"
+				PreprocessorDefinitions="_VARIADIC_MAX=10;CMAKE_INTDIR=\&quot;Release\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories=".;"
+				MkTypLibCompatible="false"
+				TargetEnvironment="1"
+				GenerateStublessProxies="true"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+			<File
+				RelativePath="D:\DIP\opencv2.4.9\opencv\sources\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule D:/DIP/opencv2.4.9/opencv/sources/CMakeLists.txt"
+					CommandLine="&quot;D:\Program Files (x86)\CMake\bin\cmake.exe&quot; -HD:/DIP/opencv2.4.9/opencv/sources -B. --check-stamp-file D:\DIP\opencv2.4.9\opencv-build\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="D:\DIP\opencv2.4.9\opencv\sources\CMakeLists.txt;CMakeFiles\3.3.2\CMakeSystem.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake&quot;;CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;CMakeFiles\3.3.2\CMakeCCompiler.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake&quot;;CMakeFiles\3.3.2\CMakeRCCompiler.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVUtils.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectCXXCompiler.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVLegacyOptions.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVVersion.cmake;D:\DIP\opencv2.4.9\opencv\sources\modules\core\include\opencv2\core\version.hpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVCompilerOptions.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVCRTLinkage.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\winrttest.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVPCHSupport.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVModule.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestBigEndian.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsGrfmt.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindTIFF.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsGUI.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\win32uitest.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsVideo.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\vfwtest.cpp;D:\DIP\opencv2.4.9\opencv\sources\3rdparty\ffmpeg\ffmpeg_version.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsPerf.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectCUDA.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\FindCUDA.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLATEX.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectPython.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPythonInterp.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectApacheAnt.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindJNI.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeFindJavaCommon.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectOpenCL.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\opencl.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectVTK.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVExtraTargets.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\cmake_uninstall.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenHeaders.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\cvconfig.h.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\opencv_modules.hpp.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenPkgconfig.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\opencv-XXX.pc.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenAndroidMK.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenConfig.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenInfoPlist.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVPackaging.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CPack.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CPackComponent.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Templates\CPackConfig.cmake.in&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Templates\CPackConfig.cmake.in&quot;;D:\DIP\opencv2.4.9\opencv\sources\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule D:/DIP/opencv2.4.9/opencv/sources/CMakeLists.txt"
+					CommandLine="&quot;D:\Program Files (x86)\CMake\bin\cmake.exe&quot; -HD:/DIP/opencv2.4.9/opencv/sources -B. --check-stamp-file D:\DIP\opencv2.4.9\opencv-build\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="D:\DIP\opencv2.4.9\opencv\sources\CMakeLists.txt;CMakeFiles\3.3.2\CMakeSystem.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake&quot;;CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;CMakeFiles\3.3.2\CMakeCCompiler.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake&quot;;CMakeFiles\3.3.2\CMakeRCCompiler.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVUtils.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectCXXCompiler.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVLegacyOptions.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVVersion.cmake;D:\DIP\opencv2.4.9\opencv\sources\modules\core\include\opencv2\core\version.hpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVCompilerOptions.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVCRTLinkage.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\winrttest.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVPCHSupport.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVModule.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestBigEndian.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsGrfmt.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindTIFF.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsGUI.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\win32uitest.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsVideo.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\vfwtest.cpp;D:\DIP\opencv2.4.9\opencv\sources\3rdparty\ffmpeg\ffmpeg_version.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLibsPerf.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectCUDA.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\FindCUDA.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVFindLATEX.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectPython.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPythonInterp.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectApacheAnt.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindJNI.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeFindJavaCommon.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake&quot;;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectOpenCL.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\checks\opencl.cpp;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVDetectVTK.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVExtraTargets.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\cmake_uninstall.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenHeaders.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\cvconfig.h.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\opencv_modules.hpp.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenPkgconfig.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\opencv-XXX.pc.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenAndroidMK.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenConfig.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVGenInfoPlist.cmake;D:\DIP\opencv2.4.9\opencv\sources\cmake\OpenCVPackaging.cmake;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CPack.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CPackComponent.cmake&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Templates\CPackConfig.cmake.in&quot;;&quot;D:\Program Files (x86)\CMake\share\cmake-3.3\Templates\CPackConfig.cmake.in&quot;;D:\DIP\opencv2.4.9\opencv\sources\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
